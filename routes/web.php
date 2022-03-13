@@ -1,9 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodoController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::resource('/todos', 'TodoController');
+Route::get('/', [TodoController::class, 'index']);
+Route::post('/todo/create', [TodoController::class, 'create']);

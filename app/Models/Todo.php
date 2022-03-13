@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Todo extends Model
 {
     use HasFactory;
+
+    protected $garded = array('id');
+
+    public static $rules = array(
+        'content' => 'required | max:20'
+    );
+
 }

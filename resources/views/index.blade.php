@@ -177,7 +177,7 @@
       margin-bottom: 15px;
     }
 
-    mb-30 {
+    .mb-30 {
       margin-bottom: 30px;
     }
 

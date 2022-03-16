@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use App\Models\Todo;
 
 class TodosTableSeeder extends Seeder
 {
@@ -14,7 +15,8 @@ class TodosTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
+       /* 
+       $param = [
             'content' => '病院に行く'
         ];
         DB::table('todos')->insert($param);
@@ -26,5 +28,7 @@ class TodosTableSeeder extends Seeder
             'content' => '洗剤を買う'
         ];
         DB::table('todos')->insert($param);
+        */
+        Todo::factory()->count(5)->create();
     }
 }

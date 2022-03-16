@@ -336,7 +336,7 @@
              <form action="{{ route('todo.delete', ['id' => $item->id]) }}" method="post">
                @csrf
                <button class="button-delete">削除</button>
-             </from>
+             </form>
            </td>
          </tr>
         @endforeach
